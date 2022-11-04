@@ -32,9 +32,11 @@ enter.addEventListener("click", function () {
       checkWord();
       setKeys();
       rowCount++;
-      if (rowCount === 6) {
-        output.children[0].innerText = "You Lose!";
-        output.children[1].innerText = `Answer was: ${correctWord}`;
+      if (!win) {
+        if (rowCount === 6) {
+          output.children[0].innerText = "You Lose!";
+          output.children[1].innerText = `Answer was: ${correctWord}`;
+        }
       }
       letterCount = 0;
       userWord = "";
@@ -77,9 +79,6 @@ function checkWord() {
 }
 
 function setKeys() {
-  console.log(greenLetters);
-  console.log(yellowLetters);
-  console.log(darkLetters);
   for (let key of keys) {
     if (greenLetters.includes(key.id)) {
       if (key.classList[1] === "yellow") {
