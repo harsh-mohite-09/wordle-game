@@ -12,7 +12,8 @@ body {
 }
 
 .heading {
-  font-size: 2.5em;
+  font-size: 2em;
+  margin: 14px 0;
 }
 
 hr {
@@ -27,9 +28,9 @@ hr {
 }
 
 .card-container {
-  margin-top: 20px;
-  width: 350px;
-  height: 420px;
+  margin-top: 2px;
+  width: 300px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,8 +43,8 @@ hr {
 }
 
 .letter {
-  width: 64px;
-  height: 64px;
+  width: 53px;
+  height: 53px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +52,7 @@ hr {
 }
 
 span {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bold;
 }
 
@@ -62,8 +63,8 @@ span {
 }
 
 .keyboard {
-  width: 484px;
-  height: 200px;
+  width: 400px;
+  height: 155px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,8 +88,8 @@ span {
   color: white;
   font-weight: bold;
   font-size: 0.8em;
-  width: 43px;
-  height: 58px;
+  width: 36px;
+  height: 48px;
   border: none;
   border-radius: 5px;
 }
@@ -98,14 +99,14 @@ span {
   color: white;
   font-weight: bold;
   font-size: 0.8em;
-  width: 63px;
-  height: 58px;
+  width: 53px;
+  height: 48px;
   border: none;
   border-radius: 5px;
 }
 
 .spacer {
-  width: 12px;
+  width: 10px;
 }
 
 .normal-key:hover {
