@@ -5,13 +5,46 @@ const card = document.querySelector("#card");
 const output = document.querySelector("#output");
 var letterCount = 0;
 var rowCount = 0;
-var correctWord = "HARSH";
 var userWord = "";
-var strCorrectWord = correctWord.split("");
 var greenLetters = [];
 var yellowLetters = [];
 var darkLetters = [];
 var win = false;
+
+function randomWord() {
+  const words = [
+    "harsh",
+    "apple",
+    "hotel",
+    "lemon",
+    "force",
+    "shape",
+    "board",
+    "grown",
+    "fruit",
+    "wagon",
+    "climb",
+    "whale",
+    "image",
+    "thumb",
+    "brick",
+    "solve",
+    "shape",
+    "wrong",
+    "store",
+    "sight",
+    "drive",
+    "peace",
+    "crowd",
+    "chord",
+  ];
+  var randomNum = Math.floor(Math.random() * words.length);
+  return words[randomNum].toUpperCase();
+}
+
+var correctWord = randomWord();
+console.log(correctWord);
+var strCorrectWord = correctWord.split("");
 
 for (let key of keys) {
   key.addEventListener("click", function (e) {
