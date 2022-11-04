@@ -1,0 +1,144 @@
+:root {
+  --bg-color: black;
+  --text-color: white;
+  --letter-color: rgb(48, 46, 46);
+  --key-color: rgb(129, 131, 132);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--letter-color);
+  border: none;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  margin-top: 20px;
+  width: 350px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.letter {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--letter-color);
+}
+
+span {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.keyboard-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.keyboard {
+  width: 484px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.key-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.key-row-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.normal-key {
+  background-color: var(--key-color);
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  width: 43px;
+  height: 58px;
+  border: none;
+  border-radius: 5px;
+}
+
+.sp-key {
+  background-color: var(--key-color);
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  width: 63px;
+  height: 58px;
+  border: none;
+  border-radius: 5px;
+}
+
+.spacer {
+  width: 12px;
+}
+
+.normal-key:hover {
+  cursor: pointer;
+}
+
+.sp-key:hover {
+  cursor: pointer;
+}
+
+.green {
+  background-color: rgb(83, 141, 78);
+}
+
+.yellow {
+  background-color: rgb(181, 159, 59);
+}
+
+.dark-grey {
+  background-color: var(--letter-color);
+}
+
+.result {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.output {
+  width: 300px;
+  height: 100px;
+}
+
+.output-display-1 {
+  font-size: 2.5em;
+}
+
+.output-display-2 {
+  font-size: 1.8em;
+}
