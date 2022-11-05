@@ -3,6 +3,8 @@ const enter = document.querySelector("#ENTER");
 const back = document.querySelector("#BACK");
 const card = document.querySelector("#card");
 const output = document.querySelector("#output");
+const resultDisplay = document.querySelector("#result-display");
+const mainDisplay = document.querySelector("#main-display");
 var letterCount = 0;
 var rowCount = 0;
 var userWord = "";
@@ -68,7 +70,9 @@ enter.addEventListener("click", function () {
       if (!win) {
         if (rowCount === 6) {
           output.children[0].innerText = "You Lose!";
-          output.children[1].innerText = `Answer was: ${correctWord}`;
+          output.children[1].innerText = `Answer: ${correctWord}`;
+          resultDisplay.classList.remove("hide");
+          mainDisplay.classList.add("blur");
         }
       }
       letterCount = 0;
@@ -130,4 +134,7 @@ function setKeys() {
 
 function gameWon() {
   output.children[0].innerText = "You Win!";
+  resultDisplay.classList.remove("hide");
+  mainDisplay.classList.add("blur");
+  output.children[1].remove();
 }
