@@ -80,12 +80,6 @@ span {
   justify-content: space-between;
 }
 
-.key-row-2 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .normal-key {
   background-color: var(--key-color);
   color: white;
@@ -169,4 +163,24 @@ span {
 
 .hide {
   display: none;
+}
+
+@media (max-width: 400px) {
+  .normal-key {
+    font-size: 0.7em;
+    width: 30px;
+    height: 48px;
+    border-radius: 5px;
+  }
+
+  .sp-key {
+    font-size: 0.7em;
+    width: 50px;
+    height: 48px;
+    border-radius: 5px;
+  }
+
+  .keyboard {
+    padding: 0 5px;
+  }
 }
