@@ -109,9 +109,9 @@ function checkWord() {
     for (let i = 0; i < 5; i++) {
       card.children[rowCount].children[i].classList.add("green");
       greenLetters.push(strUserWord[i]);
-      gameWon();
-      win = true;
     }
+    gameWon();
+    win = true;
   }
 }
 
