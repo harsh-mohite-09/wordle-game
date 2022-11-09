@@ -50,37 +50,31 @@ var strCorrectWord = correctWord.split("");
 
 for (let key of keys) {
   key.addEventListener("click", function (e) {
-    if (!win) {
-      if (letterCount < 5) {
-        card.children[rowCount].children[letterCount].children[0].innerText =
-          e.target.id;
-        letterCount++;
-        userWord += e.target.id;
-      }
+    if (!win && letterCount < 5) {
+      card.children[rowCount].children[letterCount].children[0].innerText =
+        e.target.id;
+      letterCount++;
+      userWord += e.target.id;
     }
   });
 }
 
 enter.addEventListener("click", function () {
-  if (!win) {
-    if (letterCount == 5) {
-      checkWord();
-      setKeys();
-      rowCount++;
-      if (!win) {
-        if (rowCount === 6) {
-          output.children[0].innerText = "You Lose!";
-          output.children[1].innerText = `Answer: ${correctWord}`;
-          resultDisplay.classList.remove("hide");
-          mainDisplay.classList.add("blur");
-        }
-      }
-      letterCount = 0;
-      userWord = "";
-      greenLetters = [];
-      yellowLetters = [];
-      darkLetters = [];
+  if (!win && letterCount == 5) {
+    checkWord();
+    setKeys();
+    rowCount++;
+    if (!win && rowCount === 6) {
+      output.children[0].innerText = "You Lose!";
+      output.children[1].innerText = `Answer: ${correctWord}`;
+      resultDisplay.classList.remove("hide");
+      mainDisplay.classList.add("blur");
     }
+    letterCount = 0;
+    userWord = "";
+    greenLetters = [];
+    yellowLetters = [];
+    darkLetters = [];
   }
 });
 
@@ -118,14 +112,10 @@ function checkWord() {
 function setKeys() {
   for (let key of keys) {
     if (greenLetters.includes(key.id)) {
-      if (key.classList[1] === "yellow") {
-        key.classList.remove("yellow");
-      }
+      key.classList.remove("yellow");
       key.classList.add("green");
-    } else if (yellowLetters.includes(key.id)) {
-      if (key.classList[1] !== "green") {
-        key.classList.add("yellow");
-      }
+    } else if (yellowLetters.includes(key.id) && key.classList[1] !== "green") {
+      key.classList.add("yellow");
     } else if (darkLetters.includes(key.id)) {
       key.classList.add("dark-grey");
     }
